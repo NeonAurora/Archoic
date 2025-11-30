@@ -1,0 +1,384 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout 
+  title="About Us - IT Innovation Leaders" 
+  description="Learn about our mission to deliver cutting-edge technology solutions and drive digital transformation"
+>
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-content scroll-reveal">
+        <h1>About Us</h1>
+        <p class="lead">Pioneering digital transformation through innovative technology solutions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="mission-section section">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-card frost-card scroll-reveal">
+          <h2>Our Mission</h2>
+          <p>
+            To empower businesses with cutting-edge technology solutions that drive growth, 
+            efficiency, and innovation. We bridge the gap between complex technical challenges 
+            and business objectives, delivering results that matter.
+          </p>
+        </div>
+        <div class="mission-card frost-card scroll-reveal">
+          <h2>Our Vision</h2>
+          <p>
+            To be the trusted technology partner for enterprises navigating digital transformation. 
+            We envision a future where technology seamlessly integrates with business strategy, 
+            enabling organizations to achieve their full potential.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="values-section section">
+    <div class="container">
+      <h2 class="section-title scroll-reveal">Our Core Values</h2>
+      <div class="values-grid scroll-reveal-stagger">
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <h3>Excellence</h3>
+          <p>We pursue the highest standards in every project, delivering solutions that exceed expectations.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Partnership</h3>
+          <p>We build lasting relationships based on trust, transparency, and mutual success.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">💡</div>
+          <h3>Innovation</h3>
+          <p>We stay ahead of technology trends to provide forward-thinking solutions.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">⚡</div>
+          <h3>Agility</h3>
+          <p>We adapt quickly to changing requirements and market dynamics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section section">
+    <div class="container">
+      <div class="stats-grid scroll-reveal">
+        <div class="stat-item">
+          <div class="stat-number">150+</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Enterprise Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Support Available</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise -->
+  <section class="expertise-section section">
+    <div class="container">
+      <h2 class="section-title scroll-reveal">Our Expertise</h2>
+      <div class="expertise-content scroll-reveal">
+        <p class="expertise-intro">
+          With over a decade of experience in the IT industry, our team brings deep technical 
+          expertise across multiple domains. We combine industry best practices with innovative 
+          approaches to solve complex business challenges.
+        </p>
+        <div class="expertise-areas">
+          <div class="expertise-column">
+            <h3>Technologies</h3>
+            <ul>
+              <li>Cloud Platforms (AWS, Azure, GCP)</li>
+              <li>Container Orchestration (Kubernetes, Docker)</li>
+              <li>Modern Frameworks (React, Node.js, Python)</li>
+              <li>Data Engineering (Spark, Kafka, Airflow)</li>
+              <li>AI/ML (TensorFlow, PyTorch, scikit-learn)</li>
+            </ul>
+          </div>
+          <div class="expertise-column">
+            <h3>Industries</h3>
+            <ul>
+              <li>Financial Services & Banking</li>
+              <li>Healthcare & Life Sciences</li>
+              <li>E-commerce & Retail</li>
+              <li>Manufacturing & Supply Chain</li>
+              <li>Technology & SaaS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta section">
+    <div class="container">
+      <div class="cta-content scroll-reveal">
+        <h2>Let's Build Something Great Together</h2>
+        <p>Ready to start your digital transformation journey?</p>
+        <a href="/contact" class="btn btn-primary btn-large">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .page-hero {
+    padding: calc(var(--header-height) + var(--space-16)) 0 var(--space-12);
+    background: var(--gradient-subtle);
+  }
+
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+  }
+
+  .lead {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  .section {
+    padding: var(--space-16) 0;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-12);
+    font-weight: 600;
+  }
+
+  /* Mission */
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-8);
+  }
+
+  .mission-card {
+    padding: var(--space-10);
+    border-radius: var(--radius-xl);
+  }
+
+  .mission-card h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-4);
+    color: var(--color-primary-600);
+    font-weight: 600;
+  }
+
+  .mission-card p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+  }
+
+  /* Values */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-6);
+  }
+
+  .value-card {
+    text-align: center;
+    padding: var(--space-6);
+  }
+
+  .value-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .value-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+  }
+
+  .value-card p {
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* Stats */
+  .stats-section {
+    background: var(--gradient-subtle);
+    padding: var(--space-20) 0;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-8);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: var(--font-size-5xl);
+    font-weight: 700;
+    color: var(--color-primary-600);
+    margin-bottom: var(--space-2);
+  }
+
+  .stat-label {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    font-weight: 500;
+  }
+
+  /* Expertise */
+  .expertise-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .expertise-intro {
+    text-align: center;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-12);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .expertise-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-10);
+  }
+
+  .expertise-column h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    color: var(--color-primary-600);
+  }
+
+  .expertise-column ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .expertise-column li {
+    color: var(--color-text-secondary);
+    padding-left: var(--space-5);
+    position: relative;
+  }
+
+  .expertise-column li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary-600);
+  }
+
+  /* CTA */
+  .cta {
+    background: var(--gradient-frost);
+    border-radius: var(--radius-2xl);
+    margin-inline: var(--content-padding);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%);
+    opacity: 0.9;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--space-16);
+  }
+
+  .cta h2,
+  .cta p {
+    color: white;
+  }
+
+  .cta h2 {
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+  }
+
+  .cta p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-8);
+    opacity: 0.95;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3) var(--space-8);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-size: var(--font-size-base);
+  }
+
+  .btn-primary {
+    background: white;
+    color: var(--color-primary-700);
+    border-color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .btn-large {
+    padding: var(--space-4) var(--space-10);
+    font-size: var(--font-size-lg);
+  }
+
+  @media (max-width: 768px) {
+    .mission-grid,
+    .expertise-areas {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

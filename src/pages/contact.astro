@@ -1,0 +1,406 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout 
+  title="Contact Us - Let's Connect" 
+  description="Get in touch with our team to discuss your project requirements and how we can help"
+>
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-content scroll-reveal">
+        <h1>Contact Us</h1>
+        <p class="lead">Let's discuss how we can help transform your business</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper scroll-reveal">
+          <h2>Send us a Message</h2>
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                placeholder="John Doe"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                placeholder="john@company.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input 
+                type="text" 
+                id="company" 
+                name="company" 
+                placeholder="Your Company Inc."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service Interest</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option value="cloud">Cloud Solutions</option>
+                <option value="security">Cybersecurity</option>
+                <option value="analytics">Data Analytics</option>
+                <option value="devops">DevOps & Automation</option>
+                <option value="ai">AI & Machine Learning</option>
+                <option value="development">Custom Development</option>
+                <option value="consulting">General Consulting</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required
+                placeholder="Tell us about your project requirements..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info scroll-reveal">
+          <div class="info-card frost-card">
+            <h2>Get in Touch</h2>
+            <p class="info-intro">
+              We're here to help. Reach out to us through any of the following channels.
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">📧</div>
+                <div class="method-details">
+                  <h3>Email</h3>
+                  <a href="mailto:hello@yourcompany.com">hello@yourcompany.com</a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">📞</div>
+                <div class="method-details">
+                  <h3>Phone</h3>
+                  <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">📍</div>
+                <div class="method-details">
+                  <h3>Office</h3>
+                  <p>123 Tech Street<br/>San Francisco, CA 94102</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">🕐</div>
+                <div class="method-details">
+                  <h3>Business Hours</h3>
+                  <p>Monday - Friday<br/>9:00 AM - 6:00 PM PST</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card frost-card">
+            <h3>Why Work With Us?</h3>
+            <ul class="benefits-list">
+              <li>Rapid response within 24 hours</li>
+              <li>Free initial consultation</li>
+              <li>Tailored solutions for your needs</li>
+              <li>Transparent pricing and timelines</li>
+              <li>Dedicated project management</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .page-hero {
+    padding: calc(var(--header-height) + var(--space-16)) 0 var(--space-12);
+    background: var(--gradient-subtle);
+  }
+
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .lead {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  .contact-section {
+    padding: var(--space-16) 0 var(--space-20);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-12);
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  /* Contact Form */
+  .contact-form-wrapper h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-8);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .form-group label {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    font-family: inherit;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    width: 100%;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--color-text-tertiary);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary-600);
+    box-shadow: 0 0 0 3px rgba(101, 117, 142, 0.1);
+  }
+
+  .form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right var(--space-3) center;
+    background-size: 1.2em;
+    padding-right: var(--space-10);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: var(--line-height-relaxed);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3) var(--space-8);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    border: none;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .btn-primary {
+    background: var(--color-primary-600);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: var(--color-primary-700);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .btn-full {
+    width: 100%;
+    padding: var(--space-4);
+    font-size: var(--font-size-lg);
+  }
+
+  /* Contact Info */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-6));
+  }
+
+  .info-card {
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+  }
+
+  .info-card h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .info-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .info-intro {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-6);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .contact-method {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+  }
+
+  .method-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .method-details h3 {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-2);
+    color: var(--color-text-primary);
+  }
+
+  .method-details a {
+    color: var(--color-primary-600);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    font-size: var(--font-size-sm);
+  }
+
+  .method-details a:hover {
+    color: var(--color-primary-700);
+  }
+
+  .method-details p {
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: var(--line-height-relaxed);
+    font-size: var(--font-size-sm);
+  }
+
+  .benefits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+  }
+
+  .benefits-list li {
+    color: var(--color-text-secondary);
+    padding-left: var(--space-6);
+    position: relative;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .benefits-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary-600);
+    font-weight: bold;
+  }
+
+  @media (max-width: 968px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+
+    .contact-info {
+      position: static;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn:hover {
+      transform: none;
+    }
+  }
+</style>

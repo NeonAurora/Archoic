@@ -1,0 +1,98 @@
+---
+import '../styles/global.css';
+import '../styles/animations.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { 
+  title, 
+  description = 'Leading IT solutions and digital transformation services',
+  image = '/og-image.jpg'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.site)} />
+    
+    <!-- Theme initialization - runs BEFORE page renders to prevent flash -->
+    <script is:inline>
+      // Execute immediately to prevent FOUC (Flash of Unstyled Content)
+      (function() {
+        const getTheme = () => {
+          const stored = localStorage.getItem('theme');
+          if (stored) return stored;
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+        
+        document.documentElement.setAttribute('data-theme', getTheme());
+      })();
+    </script>
+    
+    <!-- Preload critical assets (if using custom fonts) -->
+    <!-- <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin> -->
+  </head>
+  <body>
+    <slot />
+    
+    <!-- Global scroll reveal script -->
+    <script>
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('.scroll-reveal, .scroll-reveal-stagger').forEach(el => {
+        observer.observe(el);
+      });
+      
+      document.addEventListener('animationend', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.classList.contains('will-fade') || 
+            target.classList.contains('will-slide') || 
+            target.classList.contains('will-scale')) {
+          target.classList.add('animation-done');
+        }
+      }, { passive: true });
+    </script>
+  </body>
+</html>

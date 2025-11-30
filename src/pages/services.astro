@@ -1,0 +1,295 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout 
+  title="Our Services - Professional IT Solutions" 
+  description="Comprehensive IT services including cloud solutions, cybersecurity, data analytics, and custom software development"
+>
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-content scroll-reveal">
+        <h1>Our Services</h1>
+        <p class="lead">End-to-end IT solutions designed to accelerate your digital transformation</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="services-section section">
+    <div class="container">
+      <div class="services-grid scroll-reveal-stagger">
+        
+        <!-- Cloud Solutions -->
+        <div class="service-card frost-card">
+          <div class="service-icon">☁️</div>
+          <h2>Cloud Solutions</h2>
+          <p class="service-description">
+            Migrate, optimize, and manage your infrastructure with enterprise-grade cloud services.
+          </p>
+          <ul class="service-features">
+            <li>Cloud migration & modernization</li>
+            <li>Multi-cloud architecture</li>
+            <li>Infrastructure as Code (IaC)</li>
+            <li>Serverless computing</li>
+            <li>Container orchestration</li>
+          </ul>
+        </div>
+
+        <!-- Cybersecurity -->
+        <div class="service-card frost-card">
+          <div class="service-icon">🔒</div>
+          <h2>Cybersecurity</h2>
+          <p class="service-description">
+            Comprehensive security solutions to protect your digital assets and ensure compliance.
+          </p>
+          <ul class="service-features">
+            <li>Security audits & assessments</li>
+            <li>Penetration testing</li>
+            <li>Zero-trust architecture</li>
+            <li>SOC & threat monitoring</li>
+            <li>Compliance management</li>
+          </ul>
+        </div>
+
+        <!-- Data Analytics -->
+        <div class="service-card frost-card">
+          <div class="service-icon">📊</div>
+          <h2>Data Analytics</h2>
+          <p class="service-description">
+            Transform raw data into actionable insights with advanced analytics and BI solutions.
+          </p>
+          <ul class="service-features">
+            <li>Business intelligence dashboards</li>
+            <li>Predictive analytics</li>
+            <li>Data warehouse design</li>
+            <li>ETL pipeline development</li>
+            <li>Real-time data processing</li>
+          </ul>
+        </div>
+
+        <!-- DevOps -->
+        <div class="service-card frost-card">
+          <div class="service-icon">⚙️</div>
+          <h2>DevOps & Automation</h2>
+          <p class="service-description">
+            Streamline development and operations with CI/CD pipelines and infrastructure automation.
+          </p>
+          <ul class="service-features">
+            <li>CI/CD pipeline setup</li>
+            <li>Infrastructure automation</li>
+            <li>Configuration management</li>
+            <li>Monitoring & logging</li>
+            <li>Release orchestration</li>
+          </ul>
+        </div>
+
+        <!-- AI & ML -->
+        <div class="service-card frost-card">
+          <div class="service-icon">🤖</div>
+          <h2>AI & Machine Learning</h2>
+          <p class="service-description">
+            Leverage artificial intelligence and machine learning to automate processes and gain competitive advantage.
+          </p>
+          <ul class="service-features">
+            <li>ML model development</li>
+            <li>Natural language processing</li>
+            <li>Computer vision solutions</li>
+            <li>AI-powered automation</li>
+            <li>MLOps implementation</li>
+          </ul>
+        </div>
+
+        <!-- Custom Development -->
+        <div class="service-card frost-card">
+          <div class="service-icon">💻</div>
+          <h2>Custom Development</h2>
+          <p class="service-description">
+            Bespoke software solutions tailored to your specific business requirements and workflows.
+          </p>
+          <ul class="service-features">
+            <li>Web application development</li>
+            <li>Mobile app development</li>
+            <li>API design & integration</li>
+            <li>Microservices architecture</li>
+            <li>Legacy system modernization</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta section">
+    <div class="container">
+      <div class="cta-content scroll-reveal">
+        <h2>Ready to Get Started?</h2>
+        <p>Let's discuss how our services can transform your business</p>
+        <a href="/contact" class="btn btn-primary btn-large">Schedule a Consultation</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .page-hero {
+    padding: calc(var(--header-height) + var(--space-16)) 0 var(--space-12);
+    background: var(--gradient-subtle);
+  }
+
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .lead {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  .services-section {
+    padding: var(--space-16) 0;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-6);
+  }
+
+  .service-card {
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .service-card h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .service-description {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-5);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .service-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .service-features li {
+    color: var(--color-text-secondary);
+    padding-left: var(--space-5);
+    position: relative;
+    font-size: var(--font-size-sm);
+  }
+
+  .service-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary-600);
+    font-weight: bold;
+  }
+
+  .cta {
+    background: var(--gradient-frost);
+    border-radius: var(--radius-2xl);
+    margin-inline: var(--content-padding);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%);
+    opacity: 0.9;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--space-16);
+  }
+
+  .cta h2,
+  .cta p {
+    color: white;
+  }
+
+  .cta h2 {
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+  }
+
+  .cta p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-8);
+    opacity: 0.95;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3) var(--space-8);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-size: var(--font-size-base);
+  }
+
+  .btn-primary {
+    background: white;
+    color: var(--color-primary-700);
+    border-color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .btn-large {
+    padding: var(--space-4) var(--space-10);
+    font-size: var(--font-size-lg);
+  }
+
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
