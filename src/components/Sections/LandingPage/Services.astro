@@ -1,0 +1,130 @@
+---
+// src/components/sections/Services.astro
+const services = [
+  {
+    icon: '☁️',
+    title: 'SaaS Application Development',
+    description: 'Custom cloud-based software platforms built to scale with your business. We create secure, reliable SaaS solutions that grow with your user base.'
+  },
+  {
+    icon: '📱',
+    title: 'Mobile App Development',
+    description: 'Engaging iOS and Android applications that deliver seamless user experiences. Native and cross-platform solutions optimized for performance.'
+  },
+  {
+    icon: '🤖',
+    title: 'AI & Machine Learning',
+    description: 'Intelligent systems that automate processes and uncover data-driven insights. Transform your business with predictive analytics and automation.'
+  },
+  {
+    icon: '🏢',
+    title: 'Enterprise Software',
+    description: 'Robust, secure enterprise systems to streamline complex organizational workflows. Scalable solutions for mission-critical operations.'
+  }
+];
+---
+
+<section class="services section">
+  <div class="container">
+    <h2 class="section-title scroll-reveal">Our Solutions</h2>
+    <div class="services-grid scroll-reveal-stagger">
+      {services.map(service => (
+        <div class="service-card">
+          <div class="service-icon">{service.icon}</div>
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: var(--space-20) 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-12);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .service-card {
+    padding: var(--space-10);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary-500), var(--color-accent-500));
+    opacity: 0;
+    transition: opacity var(--transition-base);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-border-strong);
+  }
+  
+  .service-card:hover::before {
+    opacity: 1;
+  }
+  
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-5);
+    display: block;
+  }
+  
+  .service-card h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+  
+  .service-card p {
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: var(--line-height-relaxed);
+    font-size: var(--font-size-base);
+  }
+
+  @media (max-width: 968px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .service-card {
+      transition: none;
+    }
+    
+    .service-card:hover {
+      transform: none;
+    }
+  }
+</style>

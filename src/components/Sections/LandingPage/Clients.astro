@@ -1,0 +1,140 @@
+---
+// src/components/sections/Clients.astro
+const clients = [
+  {
+    logo: 'FT',
+    name: 'FinTech Corp',
+    industry: 'Financial Services'
+  },
+  {
+    logo: 'HL',
+    name: 'HealthLink Systems',
+    industry: 'Healthcare Solutions'
+  },
+  {
+    logo: 'RH',
+    name: 'RetailHub Inc.',
+    industry: 'E-commerce Platform'
+  },
+  {
+    logo: 'AD',
+    name: 'AutoDrive Co.',
+    industry: 'Automotive Technology'
+  },
+  {
+    logo: 'EN',
+    name: 'EduNext',
+    industry: 'Education Technology'
+  }
+];
+---
+
+<section class="clients-section section">
+  <div class="container">
+    <h2 class="section-title scroll-reveal">Trusted By</h2>
+    <p class="clients-intro scroll-reveal">Leading companies across industries rely on Archoic for their software needs</p>
+    <div class="clients-grid scroll-reveal">
+      {clients.map(client => (
+        <div class="client-card">
+          <div class="client-logo">{client.logo}</div>
+          <div class="client-name">{client.name}</div>
+          <div class="client-industry">{client.industry}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: var(--space-20) 0;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-12);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .clients-intro {
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-12);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-6);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .client-card {
+    padding: var(--space-8);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    text-align: center;
+  }
+
+  .client-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .client-logo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-frost);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-primary-600);
+    margin: 0 auto var(--space-4);
+  }
+
+  .client-name {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  .client-industry {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-tertiary);
+  }
+
+  @media (max-width: 968px) {
+    .clients-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .clients-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .client-card {
+      transition: none;
+    }
+    
+    .client-card:hover {
+      transform: none;
+    }
+  }
+</style>
