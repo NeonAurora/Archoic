@@ -1,0 +1,332 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import CloudIcon from '../../components/icons/CloudIcon.astro';
+---
+
+<MainLayout 
+  title="SaaS Development Services - Archoic" 
+  description="End-to-end SaaS development services, building scalable cloud applications with multi-tenant architecture"
+>
+  <!-- Service Hero -->
+  <section class="service-hero">
+    <div class="container">
+      <div class="hero-content scroll-reveal">
+        <div class="service-icon">
+          <CloudIcon size={64} />
+        </div>
+        <h1>SaaS Development</h1>
+        <p class="lead">Building scalable, cloud-based software-as-a-service platforms tailored to business needs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="section">
+    <div class="container">
+      <div class="content-section scroll-reveal">
+        <h2>Overview</h2>
+        <p>We offer end-to-end SaaS Development services, turning ideas into reliable cloud applications. Our team designs multi-tenant architectures and intuitive UIs that scale with your user base. Each SaaS product is built with security, performance, and maintainability in mind, ensuring a solid foundation for your business growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="section features-section">
+    <div class="container">
+      <h2 class="section-title scroll-reveal">What We Offer</h2>
+      <div class="features-grid scroll-reveal-stagger">
+        
+        <div class="feature-card frost-card">
+          <h3>Custom Platform Design</h3>
+          <p>Architecture planning, UI/UX design, and scalable backend development tailored to your business model.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Cloud Infrastructure</h3>
+          <p>Deployment on reliable cloud platforms (e.g., AWS, Azure) for high availability and automatic scaling.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Integration & APIs</h3>
+          <p>Seamless integration with third-party services and well-documented APIs for extending functionality.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Security First</h3>
+          <p>Data encryption, user authentication, and regular security audits to protect your application and users.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Continuous Delivery</h3>
+          <p>Agile development with continuous integration and updates, so your SaaS product evolves with market needs.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Multi-Tenant Architecture</h3>
+          <p>Efficient resource utilization with secure data isolation between tenants while maintaining cost-effectiveness.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study -->
+  <section class="section case-study">
+    <div class="container">
+      <div class="case-study-content frost-card scroll-reveal">
+        <h2>Success Story</h2>
+        <p class="case-study-intro">For a client in fintech, Archoic developed a SaaS platform enabling real-time analytics for thousands of users.</p>
+        <div class="case-study-details">
+          <div class="detail-item">
+            <h4>Challenge</h4>
+            <p>The client needed a scalable platform to handle real-time financial data processing for a growing user base while maintaining strict compliance standards.</p>
+          </div>
+          <div class="detail-item">
+            <h4>Solution</h4>
+            <p>We built a multi-tenant SaaS platform with real-time data pipelines, automated compliance monitoring, and zero-downtime deployment architecture.</p>
+          </div>
+          <div class="detail-item">
+            <h4>Results</h4>
+            <p>The solution now serves thousands of users with 99.9% uptime, meets all compliance requirements, and scales automatically based on demand.</p>
+          </div>
+        </div>
+        <p class="case-study-footer">This demonstrates our commitment to quality, security, and trust in delivering enterprise-grade SaaS solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta section">
+    <div class="container">
+      <div class="cta-content scroll-reveal">
+        <h2>Ready to Launch Your SaaS Product?</h2>
+        <p>Contact us to discuss how we can build a scalable solution for you</p>
+        <a href="/contact" class="btn btn-primary btn-large">Get Started</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .service-hero {
+    padding: calc(var(--header-height) + var(--space-16)) 0 var(--space-12);
+    background: var(--gradient-subtle);
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .service-icon {
+    color: var(--color-primary-600);
+    margin: 0 auto var(--space-6);
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .lead {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: var(--line-height-relaxed);
+  }
+
+  .section {
+    padding: var(--space-16) 0;
+  }
+
+  .content-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .content-section h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-6);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .content-section p {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-secondary);
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-12);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .features-section {
+    background: var(--gradient-frost);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+  }
+
+  .feature-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .feature-card p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+  }
+
+  .case-study {
+    background: var(--color-background);
+  }
+
+  .case-study-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--space-12);
+    border-radius: var(--radius-2xl);
+  }
+
+  .case-study-content h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-6);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-align: center;
+  }
+
+  .case-study-intro {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-10);
+    text-align: center;
+    font-style: italic;
+  }
+
+  .case-study-details {
+    display: grid;
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
+  }
+
+  .detail-item h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+    color: var(--color-primary-600);
+  }
+
+  .detail-item p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+  }
+
+  .case-study-footer {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
+    text-align: center;
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+    margin: 0;
+  }
+
+  .cta {
+    background: var(--gradient-frost);
+    border-radius: var(--radius-2xl);
+    margin-inline: var(--content-padding);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%);
+    opacity: 0.9;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--space-16);
+  }
+
+  .cta h2,
+  .cta p {
+    color: white;
+  }
+
+  .cta h2 {
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    font-size: var(--font-size-3xl);
+  }
+
+  .cta p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-8);
+    opacity: 0.95;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3) var(--space-8);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-size: var(--font-size-base);
+  }
+
+  .btn-primary {
+    background: white;
+    color: var(--color-primary-700);
+    border-color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .btn-large {
+    padding: var(--space-4) var(--space-10);
+    font-size: var(--font-size-lg);
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

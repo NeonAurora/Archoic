@@ -1,0 +1,327 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import SmartphoneIcon from '../../components/icons/SmartphoneIcon.astro';
+---
+
+<MainLayout 
+  title="Mobile App Development Services - Archoic" 
+  description="Crafting intuitive iOS and Android applications with seamless user experience and modern design"
+>
+  <section class="service-hero">
+    <div class="container">
+      <div class="hero-content scroll-reveal">
+        <div class="service-icon">
+          <SmartphoneIcon size={64} />
+        </div>
+        <h1>Mobile App Development</h1>
+        <p class="lead">Crafting intuitive iOS and Android applications with seamless user experience and modern design</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-section scroll-reveal">
+        <h2>Overview</h2>
+        <p>We specialize in creating mobile applications that users love. Our development approach combines beautiful design with powerful functionality, ensuring your app stands out in the crowded mobile marketplace. Whether you need a native iOS app, Android app, or cross-platform solution, we deliver exceptional mobile experiences that drive engagement and business growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section features-section">
+    <div class="container">
+      <h2 class="section-title scroll-reveal">What We Offer</h2>
+      <div class="features-grid scroll-reveal-stagger">
+        
+        <div class="feature-card frost-card">
+          <h3>Native iOS Development</h3>
+          <p>Swift and SwiftUI applications optimized for iPhone and iPad, following Apple's Human Interface Guidelines for the best user experience.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Native Android Development</h3>
+          <p>Kotlin and Jetpack Compose applications that leverage the full power of Android devices with Material Design principles.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Cross-Platform Solutions</h3>
+          <p>React Native and Flutter development for efficient multi-platform deployment while maintaining native performance and feel.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>UI/UX Design</h3>
+          <p>User-centered design process with wireframing, prototyping, and iterative testing to create intuitive and delightful interfaces.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Backend Integration</h3>
+          <p>Seamless integration with cloud services, APIs, and databases to power your app's functionality and data synchronization.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>App Store Optimization</h3>
+          <p>Guidance on app store submission, optimization strategies, and ongoing updates to maximize visibility and downloads.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section case-study">
+    <div class="container">
+      <div class="case-study-content frost-card scroll-reveal">
+        <h2>Success Story</h2>
+        <p class="case-study-intro">For a healthcare client, Archoic developed a patient engagement mobile app used by over 50,000 active users.</p>
+        <div class="case-study-details">
+          <div class="detail-item">
+            <h4>Challenge</h4>
+            <p>The client needed a HIPAA-compliant mobile application that would allow patients to access medical records, schedule appointments, and communicate securely with healthcare providers.</p>
+          </div>
+          <div class="detail-item">
+            <h4>Solution</h4>
+            <p>We built native iOS and Android apps with end-to-end encryption, biometric authentication, and real-time messaging, all while maintaining strict healthcare compliance standards.</p>
+          </div>
+          <div class="detail-item">
+            <h4>Results</h4>
+            <p>The app achieved a 4.8-star rating on both app stores, reduced appointment no-shows by 35%, and improved patient satisfaction scores significantly.</p>
+          </div>
+        </div>
+        <p class="case-study-footer">This demonstrates our ability to deliver secure, user-friendly mobile solutions in highly regulated industries.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta section">
+    <div class="container">
+      <div class="cta-content scroll-reveal">
+        <h2>Ready to Build Your Mobile App?</h2>
+        <p>Contact us to discuss how we can bring your mobile app vision to life</p>
+        <a href="/contact" class="btn btn-primary btn-large">Get Started</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .service-hero {
+    padding: calc(var(--header-height) + var(--space-16)) 0 var(--space-12);
+    background: var(--gradient-subtle);
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .service-icon {
+    color: var(--color-primary-600);
+    margin: 0 auto var(--space-6);
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .lead {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: var(--line-height-relaxed);
+  }
+
+  .section {
+    padding: var(--space-16) 0;
+  }
+
+  .content-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .content-section h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-6);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .content-section p {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-secondary);
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-12);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .features-section {
+    background: var(--gradient-frost);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+  }
+
+  .feature-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .feature-card p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+  }
+
+  .case-study {
+    background: var(--color-background);
+  }
+
+  .case-study-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--space-12);
+    border-radius: var(--radius-2xl);
+  }
+
+  .case-study-content h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-6);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-align: center;
+  }
+
+  .case-study-intro {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-10);
+    text-align: center;
+    font-style: italic;
+  }
+
+  .case-study-details {
+    display: grid;
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
+  }
+
+  .detail-item h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+    color: var(--color-primary-600);
+  }
+
+  .detail-item p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+  }
+
+  .case-study-footer {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
+    text-align: center;
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+    margin: 0;
+  }
+
+  .cta {
+    background: var(--gradient-frost);
+    border-radius: var(--radius-2xl);
+    margin-inline: var(--content-padding);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%);
+    opacity: 0.9;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--space-16);
+  }
+
+  .cta h2,
+  .cta p {
+    color: white;
+  }
+
+  .cta h2 {
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    font-size: var(--font-size-3xl);
+  }
+
+  .cta p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-8);
+    opacity: 0.95;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3) var(--space-8);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-size: var(--font-size-base);
+  }
+
+  .btn-primary {
+    background: white;
+    color: var(--color-primary-700);
+    border-color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .btn-large {
+    padding: var(--space-4) var(--space-10);
+    font-size: var(--font-size-lg);
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

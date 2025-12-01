@@ -1,23 +1,27 @@
 ---
-// src/components/sections/Services.astro
+import CloudIcon from '../../icons/CloudIcon.astro';
+import SmartphoneIcon from '../../icons/SmartphoneIcon.astro';
+import BrainIcon from '../../icons/BrainIcon.astro';
+import BuildingIcon from '../../icons/BuildingIcon.astro';
+
 const services = [
   {
-    icon: '☁️',
+    icon: CloudIcon,
     title: 'SaaS Application Development',
     description: 'Custom cloud-based software platforms built to scale with your business. We create secure, reliable SaaS solutions that grow with your user base.'
   },
   {
-    icon: '📱',
+    icon: SmartphoneIcon,
     title: 'Mobile App Development',
     description: 'Engaging iOS and Android applications that deliver seamless user experiences. Native and cross-platform solutions optimized for performance.'
   },
   {
-    icon: '🤖',
+    icon: BrainIcon,
     title: 'AI & Machine Learning',
     description: 'Intelligent systems that automate processes and uncover data-driven insights. Transform your business with predictive analytics and automation.'
   },
   {
-    icon: '🏢',
+    icon: BuildingIcon,
     title: 'Enterprise Software',
     description: 'Robust, secure enterprise systems to streamline complex organizational workflows. Scalable solutions for mission-critical operations.'
   }
@@ -25,49 +29,68 @@ const services = [
 ---
 
 <section class="services section">
-  <div class="container">
+  <div class="container-wide">
     <h2 class="section-title scroll-reveal">Our Solutions</h2>
     <div class="services-grid scroll-reveal-stagger">
-      {services.map(service => (
-        <div class="service-card">
-          <div class="service-icon">{service.icon}</div>
-          <h3>{service.title}</h3>
-          <p>{service.description}</p>
-        </div>
-      ))}
+      {services.map(service => {
+        const Icon = service.icon;
+        return (
+          <div class="service-card">
+            <div class="service-icon">
+              <Icon size={48} />
+            </div>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
+        );
+      })}
     </div>
   </div>
 </section>
 
 <style>
   .section {
-    padding: var(--space-20) 0;
+    padding: 5rem 0;
+  }
+  
+  .container-wide {
+    width: 100%;
+    max-width: 1400px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    .container-wide {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
   
   .section-title {
     text-align: center;
-    font-size: var(--font-size-3xl);
-    margin-bottom: var(--space-12);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 3rem;
     font-weight: 600;
     color: var(--color-text-primary);
   }
   
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-8);
-    max-width: 1100px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
   }
   
   .service-card {
-    padding: var(--space-10);
+    padding: 2.5rem;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-xl);
-    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+    border-radius: 16px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
   }
   
   .service-card::before {
@@ -77,14 +100,14 @@ const services = [
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-primary-500), var(--color-accent-500));
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
     opacity: 0;
-    transition: opacity var(--transition-base);
+    transition: opacity 0.2s;
   }
   
   .service-card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     border-color: var(--color-border-strong);
   }
   
@@ -93,14 +116,14 @@ const services = [
   }
   
   .service-icon {
-    font-size: 3rem;
-    margin-bottom: var(--space-5);
+    color: var(--color-primary);
+    margin-bottom: 1.25rem;
     display: block;
   }
   
   .service-card h3 {
-    font-size: var(--font-size-2xl);
-    margin-bottom: var(--space-4);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     font-weight: 600;
     color: var(--color-text-primary);
   }
@@ -108,11 +131,11 @@ const services = [
   .service-card p {
     color: var(--color-text-secondary);
     margin: 0;
-    line-height: var(--line-height-relaxed);
-    font-size: var(--font-size-base);
+    line-height: 1.6;
+    font-size: 1rem;
   }
 
-  @media (max-width: 968px) {
+  @media (max-width: 768px) {
     .services-grid {
       grid-template-columns: 1fr;
     }

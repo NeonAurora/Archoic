@@ -1,0 +1,327 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import BuildingIcon from '../../components/icons/BuildingIcon.astro';
+---
+
+<MainLayout 
+  title="Enterprise Software Solutions - Archoic" 
+  description="Developing robust enterprise-grade software solutions for business process management, integration, and scalability"
+>
+  <section class="service-hero">
+    <div class="container">
+      <div class="hero-content scroll-reveal">
+        <div class="service-icon">
+          <BuildingIcon size={64} />
+        </div>
+        <h1>Enterprise Software</h1>
+        <p class="lead">Developing robust enterprise-grade software solutions for business process management, integration, and scalability</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-section scroll-reveal">
+        <h2>Overview</h2>
+        <p>We build enterprise software that powers complex organizational workflows and mission-critical operations. Our solutions are designed for scale, security, and reliability, handling the demanding requirements of large organizations. From custom ERP systems to workflow automation platforms, we create software that integrates seamlessly with your existing infrastructure while positioning you for future growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section features-section">
+    <div class="container">
+      <h2 class="section-title scroll-reveal">What We Offer</h2>
+      <div class="features-grid scroll-reveal-stagger">
+        
+        <div class="feature-card frost-card">
+          <h3>Custom ERP Systems</h3>
+          <p>Tailored enterprise resource planning solutions that unify your business processes, from finance to supply chain management.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Workflow Automation</h3>
+          <p>Streamline complex business processes with automated workflows that reduce manual effort and minimize errors.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>System Integration</h3>
+          <p>Connect disparate systems and applications with robust integration solutions, ensuring seamless data flow across your organization.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Document Management</h3>
+          <p>Enterprise-grade document management systems with version control, access management, and compliance features.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Scalable Architecture</h3>
+          <p>Microservices-based architecture designed to scale with your organization's growth and evolving needs.</p>
+        </div>
+
+        <div class="feature-card frost-card">
+          <h3>Security & Compliance</h3>
+          <p>Built-in security controls, audit trails, and compliance features meeting industry standards and regulations.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section case-study">
+    <div class="container">
+      <div class="case-study-content frost-card scroll-reveal">
+        <h2>Success Story</h2>
+        <p class="case-study-intro">For a manufacturing client, Archoic developed an enterprise resource planning system that unified operations across 15 facilities worldwide.</p>
+        <div class="case-study-details">
+          <div class="detail-item">
+            <h4>Challenge</h4>
+            <p>The client operated with disconnected legacy systems across facilities, leading to data silos, inefficient processes, and limited visibility into global operations.</p>
+          </div>
+          <div class="detail-item">
+            <h4>Solution</h4>
+            <p>We built a comprehensive ERP platform integrating inventory management, production planning, quality control, and financial systems with real-time synchronization.</p>
+          </div>
+          <div class="detail-item">
+            <h4>Results</h4>
+            <p>The system now processes 100,000+ transactions daily, reduced operational costs by 22%, improved inventory accuracy to 98%, and provides real-time global visibility.</p>
+          </div>
+        </div>
+        <p class="case-study-footer">This demonstrates our capability to deliver scalable, mission-critical enterprise solutions that transform operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta section">
+    <div class="container">
+      <div class="cta-content scroll-reveal">
+        <h2>Ready to Transform Your Enterprise?</h2>
+        <p>Contact us to discuss how we can build enterprise software tailored to your needs</p>
+        <a href="/contact" class="btn btn-primary btn-large">Get Started</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .service-hero {
+    padding: calc(var(--header-height) + var(--space-16)) 0 var(--space-12);
+    background: var(--gradient-subtle);
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .service-icon {
+    color: var(--color-primary-600);
+    margin: 0 auto var(--space-6);
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .lead {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: var(--line-height-relaxed);
+  }
+
+  .section {
+    padding: var(--space-16) 0;
+  }
+
+  .content-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .content-section h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-6);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .content-section p {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-secondary);
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-12);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .features-section {
+    background: var(--gradient-frost);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+  }
+
+  .feature-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .feature-card p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+  }
+
+  .case-study {
+    background: var(--color-background);
+  }
+
+  .case-study-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--space-12);
+    border-radius: var(--radius-2xl);
+  }
+
+  .case-study-content h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-6);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-align: center;
+  }
+
+  .case-study-intro {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-10);
+    text-align: center;
+    font-style: italic;
+  }
+
+  .case-study-details {
+    display: grid;
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
+  }
+
+  .detail-item h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+    color: var(--color-primary-600);
+  }
+
+  .detail-item p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+  }
+
+  .case-study-footer {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
+    text-align: center;
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+    margin: 0;
+  }
+
+  .cta {
+    background: var(--gradient-frost);
+    border-radius: var(--radius-2xl);
+    margin-inline: var(--content-padding);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-accent-600) 100%);
+    opacity: 0.9;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--space-16);
+  }
+
+  .cta h2,
+  .cta p {
+    color: white;
+  }
+
+  .cta h2 {
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    font-size: var(--font-size-3xl);
+  }
+
+  .cta p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-8);
+    opacity: 0.95;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3) var(--space-8);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-size: var(--font-size-base);
+  }
+
+  .btn-primary {
+    background: white;
+    color: var(--color-primary-700);
+    border-color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .btn-large {
+    padding: var(--space-4) var(--space-10);
+    font-size: var(--font-size-lg);
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

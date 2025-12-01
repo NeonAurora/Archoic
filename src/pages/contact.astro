@@ -1,17 +1,23 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import MailIcon from '../components/icons/MailIcon.astro';
+import PhoneIcon from '../components/icons/PhoneIcon.astro';
+import MapPinIcon from '../components/icons/MapPinIcon.astro';
+import ClockIcon from '../components/icons/ClockIcon.astro';
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
+import TwitterIcon from '../components/icons/TwitterIcon.astro';
 ---
 
 <MainLayout 
-  title="Contact Us - Let's Connect" 
-  description="Get in touch with our team to discuss your project requirements and how we can help"
+  title="Contact Us - Archoic" 
+  description="Get in touch with Archoic. We'd love to hear from you and respond within one business day."
 >
   <!-- Hero Section -->
   <section class="page-hero">
     <div class="container">
       <div class="hero-content scroll-reveal">
-        <h1>Contact Us</h1>
-        <p class="lead">Let's discuss how we can help transform your business</p>
+        <h1>Contact</h1>
+        <p class="lead">We'd love to hear from you. Get in touch through any of the following channels.</p>
       </div>
     </div>
   </section>
@@ -24,26 +30,28 @@ import MainLayout from '../layouts/MainLayout.astro';
         <!-- Contact Form -->
         <div class="contact-form-wrapper scroll-reveal">
           <h2>Send us a Message</h2>
+          <p class="form-intro">Fill out our form and we'll respond within one business day.</p>
+          
           <form class="contact-form" action="#" method="POST">
             <div class="form-group">
-              <label for="name">Full Name *</label>
+              <label for="name">Name *</label>
               <input 
                 type="text" 
                 id="name" 
                 name="name" 
                 required 
-                placeholder="John Doe"
+                placeholder="Your full name"
               />
             </div>
 
             <div class="form-group">
-              <label for="email">Email Address *</label>
+              <label for="email">Email *</label>
               <input 
                 type="email" 
                 id="email" 
                 name="email" 
                 required 
-                placeholder="john@company.com"
+                placeholder="your.email@example.com"
               />
             </div>
 
@@ -53,22 +61,8 @@ import MainLayout from '../layouts/MainLayout.astro';
                 type="text" 
                 id="company" 
                 name="company" 
-                placeholder="Your Company Inc."
+                placeholder="Your company name"
               />
-            </div>
-
-            <div class="form-group">
-              <label for="service">Service Interest</label>
-              <select id="service" name="service">
-                <option value="">Select a service</option>
-                <option value="cloud">Cloud Solutions</option>
-                <option value="security">Cybersecurity</option>
-                <option value="analytics">Data Analytics</option>
-                <option value="devops">DevOps & Automation</option>
-                <option value="ai">AI & Machine Learning</option>
-                <option value="development">Custom Development</option>
-                <option value="consulting">General Consulting</option>
-              </select>
             </div>
 
             <div class="form-group">
@@ -76,9 +70,9 @@ import MainLayout from '../layouts/MainLayout.astro';
               <textarea 
                 id="message" 
                 name="message" 
-                rows="5" 
+                rows="6" 
                 required
-                placeholder="Tell us about your project requirements..."
+                placeholder="Tell us about your project or inquiry..."
               ></textarea>
             </div>
 
@@ -91,56 +85,90 @@ import MainLayout from '../layouts/MainLayout.astro';
           <div class="info-card frost-card">
             <h2>Get in Touch</h2>
             <p class="info-intro">
-              We're here to help. Reach out to us through any of the following channels.
+              We provide multiple contact options to ensure your experience is smooth and transparent – no query goes unanswered.
             </p>
 
             <div class="contact-methods">
+              
               <div class="contact-method">
-                <div class="method-icon">📧</div>
+                <div class="method-icon">
+                  <MailIcon size={24} />
+                </div>
                 <div class="method-details">
                   <h3>Email</h3>
-                  <a href="mailto:hello@yourcompany.com">hello@yourcompany.com</a>
+                  <a href="mailto:contact@archoic.com">contact@archoic.com</a>
+                  <p class="method-note">Drop us an email for direct inquiries or proposals</p>
                 </div>
               </div>
 
               <div class="contact-method">
-                <div class="method-icon">📞</div>
+                <div class="method-icon">
+                  <PhoneIcon size={24} />
+                </div>
                 <div class="method-details">
                   <h3>Phone</h3>
-                  <a href="tel:+1234567890">+1 (234) 567-890</a>
+                  <a href="tel:+18001234567">+1 (800) 123-4567</a>
+                  <p class="method-note">Available 9am–6pm (local time) for any questions or consultations</p>
                 </div>
               </div>
 
               <div class="contact-method">
-                <div class="method-icon">📍</div>
+                <div class="method-icon">
+                  <MapPinIcon size={24} />
+                </div>
                 <div class="method-details">
                   <h3>Office</h3>
-                  <p>123 Tech Street<br/>San Francisco, CA 94102</p>
+                  <p>1234 Innovation Drive, Suite 100<br/>Dhaka</p>
+                  <a href="https://maps.google.com/?q=1234+Innovation+Drive+Dhaka" target="_blank" class="map-link">View on Map</a>
+                  <p class="method-note">You're welcome to visit us (by appointment)</p>
                 </div>
               </div>
 
               <div class="contact-method">
-                <div class="method-icon">🕐</div>
+                <div class="method-icon">
+                  <ClockIcon size={24} />
+                </div>
                 <div class="method-details">
                   <h3>Business Hours</h3>
-                  <p>Monday - Friday<br/>9:00 AM - 6:00 PM PST</p>
+                  <p>Monday - Friday<br/>9:00 AM - 6:00 PM</p>
                 </div>
               </div>
+
             </div>
           </div>
 
-          <div class="info-card frost-card">
-            <h3>Why Work With Us?</h3>
-            <ul class="benefits-list">
-              <li>Rapid response within 24 hours</li>
-              <li>Free initial consultation</li>
-              <li>Tailored solutions for your needs</li>
-              <li>Transparent pricing and timelines</li>
-              <li>Dedicated project management</li>
-            </ul>
+          <div class="info-card frost-card social-card">
+            <h3>Connect With Us</h3>
+            <p>Follow us on social media for updates and quick messages</p>
+            <div class="social-links">
+              <a href="https://linkedin.com/company/archoic" target="_blank" aria-label="LinkedIn" class="social-link">
+                <LinkedInIcon size={20} />
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://twitter.com/archoic" target="_blank" aria-label="Twitter" class="social-link">
+                <TwitterIcon size={20} />
+                <span>Twitter</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="info-card frost-card support-card">
+            <p class="support-note">
+              <strong>Existing clients?</strong> If you're looking for help with an ongoing project, please visit our <a href="/support">Support page</a> for dedicated assistance.
+            </p>
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-content scroll-reveal frost-card">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Have a question or ready to begin? Reach out now and we'll guide you through the next steps. We're here to make your vision a reality.</p>
       </div>
     </div>
   </section>
@@ -172,7 +200,7 @@ import MainLayout from '../layouts/MainLayout.astro';
   }
 
   .contact-section {
-    padding: var(--space-16) 0 var(--space-20);
+    padding: var(--space-16) 0;
   }
 
   .contact-grid {
@@ -187,9 +215,15 @@ import MainLayout from '../layouts/MainLayout.astro';
   /* Contact Form */
   .contact-form-wrapper h2 {
     font-size: var(--font-size-2xl);
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-3);
     font-weight: 600;
     color: var(--color-text-primary);
+  }
+
+  .form-intro {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-8);
+    line-height: var(--line-height-relaxed);
   }
 
   .contact-form {
@@ -211,7 +245,6 @@ import MainLayout from '../layouts/MainLayout.astro';
   }
 
   .form-group input,
-  .form-group select,
   .form-group textarea {
     padding: var(--space-3) var(--space-4);
     border: 1px solid var(--color-border);
@@ -230,26 +263,15 @@ import MainLayout from '../layouts/MainLayout.astro';
   }
 
   .form-group input:focus,
-  .form-group select:focus,
   .form-group textarea:focus {
     outline: none;
     border-color: var(--color-primary-600);
     box-shadow: 0 0 0 3px rgba(101, 117, 142, 0.1);
   }
 
-  .form-group select {
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right var(--space-3) center;
-    background-size: 1.2em;
-    padding-right: var(--space-10);
-  }
-
   .form-group textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 140px;
     line-height: var(--line-height-relaxed);
   }
 
@@ -308,21 +330,22 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   .info-card h3 {
     font-size: var(--font-size-lg);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-2);
     font-weight: 600;
     color: var(--color-text-primary);
   }
 
   .info-intro {
     color: var(--color-text-secondary);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-8);
     line-height: var(--line-height-relaxed);
+    font-size: var(--font-size-sm);
   }
 
   .contact-methods {
     display: flex;
     flex-direction: column;
-    gap: var(--space-6);
+    gap: var(--space-8);
   }
 
   .contact-method {
@@ -332,9 +355,14 @@ import MainLayout from '../layouts/MainLayout.astro';
   }
 
   .method-icon {
-    font-size: 1.5rem;
+    color: var(--color-primary-600);
     flex-shrink: 0;
     line-height: 1;
+    padding-top: 2px;
+  }
+
+  .method-details {
+    flex: 1;
   }
 
   .method-details h3 {
@@ -348,11 +376,15 @@ import MainLayout from '../layouts/MainLayout.astro';
     color: var(--color-primary-600);
     text-decoration: none;
     transition: color var(--transition-fast);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    display: block;
+    margin-bottom: var(--space-2);
   }
 
   .method-details a:hover {
     color: var(--color-primary-700);
+    text-decoration: underline;
   }
 
   .method-details p {
@@ -362,29 +394,107 @@ import MainLayout from '../layouts/MainLayout.astro';
     font-size: var(--font-size-sm);
   }
 
-  .benefits-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-    margin: 0;
-    padding: 0;
+  .method-note {
+    margin-top: var(--space-2);
+    font-style: italic;
   }
 
-  .benefits-list li {
+  .map-link {
+    font-size: var(--font-size-sm);
+    margin-top: var(--space-2);
+  }
+
+  /* Social Card */
+  .social-card h3 {
+    margin-bottom: var(--space-3);
+  }
+
+  .social-card p {
     color: var(--color-text-secondary);
-    padding-left: var(--space-6);
-    position: relative;
+    margin-bottom: var(--space-5);
+    font-size: var(--font-size-sm);
+  }
+
+  .social-links {
+    display: flex;
+    gap: var(--space-4);
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+  }
+
+  .social-link:hover {
+    border-color: var(--color-primary-600);
+    background: var(--color-primary-50);
+    color: var(--color-primary-600);
+    transform: translateY(-2px);
+  }
+
+  /* Support Card */
+  .support-card {
+    background: var(--color-accent-50);
+    border: 1px solid var(--color-accent-200);
+  }
+
+  .support-note {
+    margin: 0;
+    color: var(--color-text-secondary);
     font-size: var(--font-size-sm);
     line-height: var(--line-height-relaxed);
   }
 
-  .benefits-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
+  .support-note strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+
+  .support-note a {
     color: var(--color-primary-600);
-    font-weight: bold;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .support-note a:hover {
+    text-decoration: underline;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: var(--space-12) 0 var(--space-20);
+  }
+
+  .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-12);
+    border-radius: var(--radius-2xl);
+  }
+
+  .cta-content h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-4);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .cta-content p {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
   }
 
   @media (max-width: 968px) {
@@ -396,10 +506,19 @@ import MainLayout from '../layouts/MainLayout.astro';
     .contact-info {
       position: static;
     }
+
+    .social-links {
+      flex-direction: column;
+    }
+
+    .social-link {
+      justify-content: center;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .btn:hover {
+    .btn:hover,
+    .social-link:hover {
       transform: none;
     }
   }

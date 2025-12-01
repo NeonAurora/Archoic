@@ -1,131 +1,139 @@
 /* ========================================
-   FROSTY COLD-AURA DESIGN TOKENS
-   Inspired by minimalist winter aesthetics
+   VIBRANT MODERN DESIGN TOKENS
+   Inspired by Astro's colorful gradients
    ======================================== */
 
 :root {
-  /* ========== FROSTY COLOR PALETTE - LIGHT MODE (DEFAULT) ========== */
+  /* ========== VIBRANT COLOR PALETTE - LIGHT MODE (DEFAULT) ========== */
   
-  /* Primary - Cool Steel Blue */
-  --color-primary-50: #f1f4f9;
-  --color-primary-100: #dce0eb;
-  --color-primary-200: #c5c9d4;
-  --color-primary-300: #99aec7;
-  --color-primary-400: #8e9ab2;
-  --color-primary-500: #7589a8;
-  --color-primary-600: #65758e;
-  --color-primary-700: #556376;
-  --color-primary-800: #475262;
-  --color-primary-900: #3d4553;
+  /* Primary - Vibrant Blue/Purple */
+  --color-primary-50: #f0f1ff;
+  --color-primary-100: #e0e3ff;
+  --color-primary-200: #c7ccff;
+  --color-primary-300: #a5aaff;
+  --color-primary-400: #8087ff;
+  --color-primary-500: #5a6dff;
+  --color-primary-600: #3245ff;
+  --color-primary-700: #2838cc;
+  --color-primary-800: #1f2a99;
+  --color-primary-900: #161f66;
   
-  /* Accent - Icy Blue */
-  --color-accent-50: #f0f4f8;
-  --color-accent-100: #d9e2ec;
-  --color-accent-200: #bcccdc;
-  --color-accent-300: #9fb3c8;
-  --color-accent-400: #829ab1;
-  --color-accent-500: #627d98;
-  --color-accent-600: #486581;
-  --color-accent-700: #334e68;
-  --color-accent-800: #243b53;
-  --color-accent-900: #102a43;
+  /* Accent - Vibrant Pink/Purple */
+  --color-accent-50: #fdf4ff;
+  --color-accent-100: #fae8ff;
+  --color-accent-200: #f5d0fe;
+  --color-accent-300: #f0abfc;
+  --color-accent-400: #e879f9;
+  --color-accent-500: #bc52ee;
+  --color-accent-600: #a855f7;
+  --color-accent-700: #9333ea;
+  --color-accent-800: #7e22ce;
+  --color-accent-900: #6b21a8;
   
-  /* Neutral/Grayscale - Frosty Grays */
-  --color-gray-50: #f1f2f4;
-  --color-gray-100: #e8eaed;
-  --color-gray-200: #d9d9d9;
-  --color-gray-300: #cbccce;
-  --color-gray-400: #c2c3c5;
-  --color-gray-500: #a8aab0;
-  --color-gray-600: #8a8d94;
-  --color-gray-700: #6c6f78;
-  --color-gray-800: #535353;
-  --color-gray-900: #3a3a3a;
+  /* Gradient Accent - Vibrant Red/Orange */
+  --color-gradient-50: #fff1f1;
+  --color-gradient-100: #ffe1e1;
+  --color-gradient-200: #ffc7c7;
+  --color-gradient-300: #ffa3a3;
+  --color-gradient-400: #ff6b6b;
+  --color-gradient-500: #f04141;
+  --color-gradient-600: #d83333;
+  --color-gradient-700: #b52a2a;
+  --color-gradient-800: #942626;
+  --color-gradient-900: #7a2525;
   
-  /* Semantic Colors - Cool Tones */
-  --color-success: #5fb3a1;
-  --color-warning: #c4a569;
-  --color-error: #b56a6a;
-  --color-info: #7589a8;
+  /* Neutral/Grayscale */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
   
-  /* Surface Colors - Layered Frost */
-  --color-background: #f1f2f4;
+  /* Semantic Colors - Vibrant */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+  
+  /* Surface Colors */
+  --color-background: #ffffff;
   --color-surface: #ffffff;
   --color-surface-elevated: #fafbfc;
-  --color-surface-frost: linear-gradient(135deg, #f1f2f4 0%, #dce0eb 100%);
-  --color-surface-glass: rgba(255, 255, 255, 0.6);
-  --color-border: #e0e2e6;
-  --color-border-strong: #d4d4d4;
-  --color-border-frost: rgba(142, 154, 178, 0.15);
+  --color-border: #e5e7eb;
+  --color-border-strong: #d1d5db;
   
-  /* Text Colors - Subdued Cool */
-  --color-text-primary: #3a3a3a;
-  --color-text-secondary: #65758e;
-  --color-text-tertiary: #8e9ab2;
-  --color-text-muted: #99aec7;
+  /* Text Colors */
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #6b7280;
+  --color-text-muted: #9ca3af;
   --color-text-inverse: #ffffff;
-  --color-text-link: #65758e;
+  --color-text-link: #3245ff;
   
-  /* Gradient Backgrounds - Frosty Layers */
-  --gradient-frost: linear-gradient(135deg, #f1f2f4 0%, #dce0eb 50%, #c5c9d4 100%);
-  --gradient-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(220, 224, 235, 0.5) 100%);
-  --gradient-subtle: linear-gradient(135deg, #fafbfc 0%, #f1f2f4 100%);
-  --gradient-card: linear-gradient(135deg, #ffffff 0%, #f8f9fb 100%);
+  /* Vibrant Gradient Backgrounds */
+  --gradient-primary: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+  --gradient-secondary: linear-gradient(155deg, #d83333 0%, #f041ff 100%);
+  --gradient-accent: linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%);
+  --gradient-subtle: linear-gradient(135deg, #fafbfc 0%, #f3f4f6 100%);
+  --gradient-frost: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+  --gradient-card: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
   
   /* Glass/Frosted Effects */
   --backdrop-blur: blur(12px);
-  --glass-background: rgba(255, 255, 255, 0.65);
-  --glass-border: rgba(142, 154, 178, 0.2);
+  --glass-background: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.1);
   
   /* ========== SPACING SCALE ========== */
-  --space-1: 0.25rem;   /* 4px */
-  --space-2: 0.5rem;    /* 8px */
-  --space-3: 0.75rem;   /* 12px */
-  --space-4: 1rem;      /* 16px */
-  --space-5: 1.25rem;   /* 20px */
-  --space-6: 1.5rem;    /* 24px */
-  --space-8: 2rem;      /* 32px */
-  --space-10: 2.5rem;   /* 40px */
-  --space-12: 3rem;     /* 48px */
-  --space-16: 4rem;     /* 64px */
-  --space-20: 5rem;     /* 80px */
-  --space-24: 6rem;     /* 96px */
-  --space-32: 8rem;     /* 128px */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
   
   /* ========== TYPOGRAPHY SCALE ========== */
-  --font-size-xs: 0.75rem;      /* 12px */
-  --font-size-sm: 0.875rem;     /* 14px */
-  --font-size-base: 1rem;       /* 16px */
-  --font-size-lg: 1.125rem;     /* 18px */
-  --font-size-xl: 1.25rem;      /* 20px */
-  --font-size-2xl: 1.5rem;      /* 24px */
-  --font-size-3xl: 1.875rem;    /* 30px */
-  --font-size-4xl: 2.25rem;     /* 36px */
-  --font-size-5xl: 3rem;        /* 48px */
-  --font-size-6xl: 3.75rem;     /* 60px */
-  --font-size-7xl: 4.5rem;      /* 72px */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  --font-size-7xl: 4.5rem;
   
-  /* Font Families */
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   
-  /* Font Weights */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   
-  /* Line Heights */
   --line-height-tight: 1.25;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
   
   /* ========== BORDER RADIUS ========== */
-  --radius-sm: 0.25rem;   /* 4px */
-  --radius-md: 0.5rem;    /* 8px */
-  --radius-lg: 0.75rem;   /* 12px */
-  --radius-xl: 1rem;      /* 16px */
-  --radius-2xl: 1.5rem;   /* 24px */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
   --radius-full: 9999px;
   
   /* ========== SHADOWS ========== */
@@ -151,69 +159,66 @@
   --z-tooltip: 700;
   
   /* ========== LAYOUT ========== */
-  --container-max-width: 1280px;
+  --container-max-width: 1400px;
   --header-height: 64px;
   --content-padding: var(--space-6);
 }
 
 /* ========================================
-   DARK MODE - Frosty Night
+   DARK MODE
    ======================================== */
 
 [data-theme="dark"] {
-  /* Primary - Cooler in dark mode */
-  --color-primary-main: #8e9ab2;
+  /* Primary - Brighter in dark */
+  --color-primary-500: #7589ff;
+  --color-primary-600: #5a6dff;
   
-  /* Accent */
-  --color-accent-main: #7589a8;
+  /* Accent - Brighter pink */
+  --color-accent-500: #d68fff;
+  --color-accent-600: #bc52ee;
   
-  /* Grayscale - Dark Frost */
-  --color-gray-50: #1a1d23;
-  --color-gray-100: #23272f;
-  --color-gray-200: #2d313a;
-  --color-gray-300: #3d4553;
-  --color-gray-400: #4d5461;
-  --color-gray-500: #65758e;
-  --color-gray-600: #8e9ab2;
-  --color-gray-700: #99aec7;
-  --color-gray-800: #c5c9d4;
-  --color-gray-900: #dce0eb;
+  /* Grayscale - Dark */
+  --color-gray-50: #18181b;
+  --color-gray-100: #27272a;
+  --color-gray-200: #3f3f46;
+  --color-gray-300: #52525b;
+  --color-gray-400: #71717a;
+  --color-gray-500: #a1a1aa;
+  --color-gray-600: #d4d4d8;
+  --color-gray-700: #e4e4e7;
+  --color-gray-800: #f4f4f5;
+  --color-gray-900: #fafafa;
   
-  /* Surface Colors - Dark Frost */
-  --color-background: #0f1115;
-  --color-surface: #1a1d23;
-  --color-surface-elevated: #23272f;
-  --color-surface-frost: linear-gradient(135deg, #1a1d23 0%, #2d313a 100%);
-  --color-surface-glass: rgba(26, 29, 35, 0.7);
-  --color-border: #2d313a;
-  --color-border-strong: #3d4553;
-  --color-border-frost: rgba(142, 154, 178, 0.15);
+  /* Surface Colors - Dark */
+  --color-background: #09090b;
+  --color-surface: #18181b;
+  --color-surface-elevated: #27272a;
+  --color-border: #3f3f46;
+  --color-border-strong: #52525b;
   
-  /* Text Colors - Dark Mode */
-  --color-text-primary: #dce0eb;
-  --color-text-secondary: #99aec7;
-  --color-text-tertiary: #8e9ab2;
-  --color-text-muted: #65758e;
-  --color-text-inverse: #1a1d23;
-  --color-text-link: #8e9ab2;
+  /* Text Colors - Dark */
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #d4d4d8;
+  --color-text-tertiary: #a1a1aa;
+  --color-text-muted: #71717a;
+  --color-text-inverse: #18181b;
+  --color-text-link: #7589ff;
   
-  /* Semantic Colors - Darker variants */
-  --color-success: #6bc9b7;
-  --color-warning: #d4b67f;
-  --color-error: #c58080;
-  --color-info: #8e9ab2;
+  /* Semantic Colors - Brighter */
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+  --color-info: #60a5fa;
   
-  /* Gradient Backgrounds - Dark Frost */
-  --gradient-frost: linear-gradient(135deg, #1a1d23 0%, #2d313a 50%, #3d4553 100%);
-  --gradient-glass: linear-gradient(180deg, rgba(26, 29, 35, 0.9) 0%, rgba(45, 49, 58, 0.6) 100%);
-  --gradient-subtle: linear-gradient(135deg, #23272f 0%, #1a1d23 100%);
-  --gradient-card: linear-gradient(135deg, #1a1d23 0%, #212429 100%);
+  /* Gradients - Dark */
+  --gradient-subtle: linear-gradient(135deg, #27272a 0%, #18181b 100%);
+  --gradient-card: linear-gradient(135deg, #18181b 0%, #1f1f23 100%);
   
-  /* Glass/Frosted Effects - Dark */
-  --glass-background: rgba(26, 29, 35, 0.75);
-  --glass-border: rgba(142, 154, 178, 0.15);
+  /* Glass - Dark */
+  --glass-background: rgba(24, 24, 27, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
   
-  /* Shadows - More prominent in dark mode */
+  /* Shadows - More prominent */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.4);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
@@ -221,54 +226,47 @@
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.7);
 }
 
-/* ========================================
-   MEDIA QUERY BASED DARK MODE (Fallback)
-   ======================================== */
-
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --color-primary-main: #8e9ab2;
-    --color-accent-main: #7589a8;
+    --color-primary-500: #7589ff;
+    --color-primary-600: #5a6dff;
+    --color-accent-500: #d68fff;
+    --color-accent-600: #bc52ee;
     
-    --color-gray-50: #1a1d23;
-    --color-gray-100: #23272f;
-    --color-gray-200: #2d313a;
-    --color-gray-300: #3d4553;
-    --color-gray-400: #4d5461;
-    --color-gray-500: #65758e;
-    --color-gray-600: #8e9ab2;
-    --color-gray-700: #99aec7;
-    --color-gray-800: #c5c9d4;
-    --color-gray-900: #dce0eb;
+    --color-gray-50: #18181b;
+    --color-gray-100: #27272a;
+    --color-gray-200: #3f3f46;
+    --color-gray-300: #52525b;
+    --color-gray-400: #71717a;
+    --color-gray-500: #a1a1aa;
+    --color-gray-600: #d4d4d8;
+    --color-gray-700: #e4e4e7;
+    --color-gray-800: #f4f4f5;
+    --color-gray-900: #fafafa;
     
-    --color-background: #0f1115;
-    --color-surface: #1a1d23;
-    --color-surface-elevated: #23272f;
-    --color-surface-frost: linear-gradient(135deg, #1a1d23 0%, #2d313a 100%);
-    --color-surface-glass: rgba(26, 29, 35, 0.7);
-    --color-border: #2d313a;
-    --color-border-strong: #3d4553;
-    --color-border-frost: rgba(142, 154, 178, 0.15);
+    --color-background: #09090b;
+    --color-surface: #18181b;
+    --color-surface-elevated: #27272a;
+    --color-border: #3f3f46;
+    --color-border-strong: #52525b;
     
-    --color-text-primary: #dce0eb;
-    --color-text-secondary: #99aec7;
-    --color-text-tertiary: #8e9ab2;
-    --color-text-muted: #65758e;
-    --color-text-inverse: #1a1d23;
-    --color-text-link: #8e9ab2;
+    --color-text-primary: #fafafa;
+    --color-text-secondary: #d4d4d8;
+    --color-text-tertiary: #a1a1aa;
+    --color-text-muted: #71717a;
+    --color-text-inverse: #18181b;
+    --color-text-link: #7589ff;
     
-    --color-success: #6bc9b7;
-    --color-warning: #d4b67f;
-    --color-error: #c58080;
-    --color-info: #8e9ab2;
+    --color-success: #34d399;
+    --color-warning: #fbbf24;
+    --color-error: #f87171;
+    --color-info: #60a5fa;
     
-    --gradient-frost: linear-gradient(135deg, #1a1d23 0%, #2d313a 50%, #3d4553 100%);
-    --gradient-glass: linear-gradient(180deg, rgba(26, 29, 35, 0.9) 0%, rgba(45, 49, 58, 0.6) 100%);
-    --gradient-subtle: linear-gradient(135deg, #23272f 0%, #1a1d23 100%);
-    --gradient-card: linear-gradient(135deg, #1a1d23 0%, #212429 100%);
+    --gradient-subtle: linear-gradient(135deg, #27272a 0%, #18181b 100%);
+    --gradient-card: linear-gradient(135deg, #18181b 0%, #1f1f23 100%);
     
-    --glass-background: rgba(26, 29, 35, 0.75);
-    --glass-border: rgba(142, 154, 178, 0.15);
+    --glass-background: rgba(24, 24, 27, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.1);
     
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.4);

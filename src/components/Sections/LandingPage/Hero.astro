@@ -3,19 +3,17 @@
 ---
 
 <section class="hero">
-  <div class="hero-background"></div>
-  <div class="container">
-    <div class="hero-content scroll-reveal">
-      <h1 class="hero-title">
-        Innovative SaaS, Mobile & AI Solutions
-      </h1>
-      <p class="hero-description">
-        Your trusted software partner. Empowering your digital transformation with cutting-edge technology and expert engineering.
-      </p>
-      <div class="hero-actions">
-        <a href="/contact" class="btn btn-primary">Start Your Project</a>
-        <a href="/services" class="btn btn-glass">Explore Services</a>
-      </div>
+  <img id="hero-background" src="/background.svg" alt="" />
+  <div class="hero-content scroll-reveal">
+    <h1 class="hero-title">
+      Innovative SaaS, Mobile & AI Solutions
+    </h1>
+    <p class="hero-description">
+      Your trusted software partner. Empowering your digital transformation with cutting-edge technology and expert engineering.
+    </p>
+    <div class="hero-actions">
+      <a href="/contact" class="btn btn-primary">Start Your Project</a>
+      <a href="/services" class="btn btn-secondary">Explore Services</a>
     </div>
   </div>
 </section>
@@ -23,52 +21,41 @@
 <style>
   .hero {
     position: relative;
-    padding: calc(var(--header-height) + var(--space-20)) 0 var(--space-20);
-    overflow: hidden;
-    min-height: 60vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-  }
-  
-  .hero-background {
-    position: absolute;
-    inset: 0;
-    background: var(--gradient-subtle);
-    z-index: 0;
+    justify-content: center;
+    padding: calc(var(--header-height) + 2rem) 1rem 2rem;
+    overflow: hidden;
   }
   
   .hero-content {
-    max-width: 900px;
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
+    max-width: 800px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    margin-bottom: var(--space-6);
-    line-height: 1.15;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
     font-weight: 600;
-    letter-spacing: -0.02em;
-    color: var(--color-text-primary);
+    color: #111827;
   }
   
   .hero-description {
-    font-size: var(--font-size-xl);
-    color: var(--color-text-secondary);
-    margin-bottom: var(--space-8);
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #4b5563;
+    margin-bottom: 2rem;
     font-weight: 400;
-    line-height: var(--line-height-relaxed);
+    line-height: 1.6;
   }
   
   .hero-actions {
     display: flex;
-    gap: var(--space-4);
-    justify-content: center;
+    gap: 1rem;
     flex-wrap: wrap;
   }
   
@@ -76,47 +63,51 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: var(--space-3) var(--space-8);
-    font-weight: var(--font-weight-semibold);
-    border-radius: var(--radius-lg);
-    transition: all var(--transition-base);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.2s;
     text-decoration: none;
     border: 1px solid transparent;
-    font-size: var(--font-size-base);
+    font-size: 1rem;
     cursor: pointer;
   }
   
   .btn-primary {
-    background: var(--color-primary-600);
     color: white;
-    border-color: var(--color-primary-600);
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.24);
   }
   
   .btn-primary:hover {
-    background: var(--color-primary-700);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    color: rgb(230, 230, 230);
+    box-shadow: none;
   }
-  
-  .btn-glass {
-    background: var(--glass-background);
-    backdrop-filter: var(--backdrop-blur);
-    color: var(--color-text-primary);
-    border-color: var(--glass-border);
+
+  .btn-secondary {
+    color: #111827;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
   }
-  
-  .btn-glass:hover {
-    background: var(--color-surface-elevated);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 1);
+    color: rgb(78, 80, 86);
   }
 
   @media (max-width: 768px) {
     .hero {
-      padding: calc(var(--header-height) + var(--space-12)) 0 var(--space-12);
-      min-height: auto;
+      min-height: 80vh;
+      padding: calc(var(--header-height) + 3rem) 1rem 2rem;
     }
     
+    .hero-content {
+      padding-top: 10%;
+    }
+
     .hero-actions {
       flex-direction: column;
       width: 100%;
@@ -124,6 +115,7 @@
     
     .hero-actions .btn {
       width: 100%;
+      padding: 1rem 1.5rem;
     }
   }
 

@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   // Site configuration
-  site: 'https://yourcompany.com', // Replace with your actual domain
+  site: 'https://archoic.com', // Replace with your actual domain
   
   // Build optimizations
   build: {
