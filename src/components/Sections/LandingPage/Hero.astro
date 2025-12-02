@@ -178,13 +178,12 @@
     81% { transform: scale(4) rotate(45deg); opacity: 1; }
     100% { transform: scale(50) rotate(45deg); opacity: 0; }
   }
-
- /* Secondary Button - btn-16 style */
+/* Secondary Button - btn-16 style */
 .btn-secondary {
   border: none;
   color: #000;
-  background: transparent;
-  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  background: rgba(255,255,255,0.4);
+  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.8),
               7px 7px 20px 0px rgba(0,0,0,.1),
               4px 4px 5px 0px rgba(0,0,0,.1);
 }
@@ -199,15 +198,20 @@
   direction: rtl;
   z-index: -1;
   border-radius: 5px;
-  box-shadow: -7px -7px 20px 0px rgba(255,255,255,.6),
-              -4px -4px 5px 0px rgba(255,255,255,.6),
-              7px 7px 20px 0px rgba(0,0,0,.2),
-              4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: 
+    -7px 0 20px 0px rgba(0,0,0,.2),          /* Left side shadow */
+    -4px 0 5px 0px rgba(0,0,0,.2),           /* Left side (smaller) */
+    7px 0 20px 0px rgba(0,0,0,.2),           /* Right side shadow */
+    4px 0 5px 0px rgba(0,0,0,.2),            /* Right side (smaller) */
+    -7px -7px 20px 0px rgba(255,255,255,.9), /* Top-left glow */
+    7px 7px 20px 0px rgba(0,0,0,.3);         /* Bottom-right shadow */
+  background: rgba(255, 255, 255, 0.4);
   transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
   color: #000;
+  background-color: transparent;
 }
 
 .btn-secondary:hover:after {
@@ -219,6 +223,7 @@
 .btn-secondary:active {
   top: 2px;
 }
+
   @media (max-width: 1024px) {
     .hero-container {
       grid-template-columns: 1fr;
