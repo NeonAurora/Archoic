@@ -1,5 +1,6 @@
 ---
 // src/components/sections/Hero.astro
+import ThreeScene from "../../ThreeScene"
 ---
 
 <section class="hero">
@@ -18,7 +19,7 @@
     </div>
     
     <div class="hero-animation-space">
-      <!-- Space reserved for future animations -->
+      <ThreeScene client:visible />
     </div>
   </div>
 </section>
@@ -81,6 +82,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
   
   /* Base button styles */
@@ -178,51 +180,52 @@
     81% { transform: scale(4) rotate(45deg); opacity: 1; }
     100% { transform: scale(50) rotate(45deg); opacity: 0; }
   }
-/* Secondary Button - btn-16 style */
-.btn-secondary {
-  border: none;
-  color: #000;
-  background: rgba(255,255,255,0.4);
-  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.8),
-              7px 7px 20px 0px rgba(0,0,0,.1),
-              4px 4px 5px 0px rgba(0,0,0,.1);
-}
+  
+  /* Secondary Button - btn-16 style */
+  .btn-secondary {
+    border: none;
+    color: #000;
+    background: rgba(255,255,255,0.4);
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.8),
+                7px 7px 20px 0px rgba(0,0,0,.1),
+                4px 4px 5px 0px rgba(0,0,0,.1);
+  }
 
-.btn-secondary:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  direction: rtl;
-  z-index: -1;
-  border-radius: 5px;
-  box-shadow: 
-    -7px 0 20px 0px rgba(0,0,0,.2),          /* Left side shadow */
-    -4px 0 5px 0px rgba(0,0,0,.2),           /* Left side (smaller) */
-    7px 0 20px 0px rgba(0,0,0,.2),           /* Right side shadow */
-    4px 0 5px 0px rgba(0,0,0,.2),            /* Right side (smaller) */
-    -7px -7px 20px 0px rgba(255,255,255,.9), /* Top-left glow */
-    7px 7px 20px 0px rgba(0,0,0,.3);         /* Bottom-right shadow */
-  background: rgba(255, 255, 255, 0.4);
-  transition: all 0.3s ease;
-}
+  .btn-secondary:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    border-radius: 5px;
+    box-shadow: 
+      -7px 0 20px 0px rgba(0,0,0,.2),
+      -4px 0 5px 0px rgba(0,0,0,.2),
+      7px 0 20px 0px rgba(0,0,0,.2),
+      4px 0 5px 0px rgba(0,0,0,.2),
+      -7px -7px 20px 0px rgba(255,255,255,.9),
+      7px 7px 20px 0px rgba(0,0,0,.3);
+    background: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+  }
 
-.btn-secondary:hover {
-  color: #000;
-  background-color: transparent;
-}
+  .btn-secondary:hover {
+    color: #000;
+    background-color: transparent;
+  }
 
-.btn-secondary:hover:after {
-  left: auto;
-  right: 0;
-  width: 100%;
-}
+  .btn-secondary:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
 
-.btn-secondary:active {
-  top: 2px;
-}
+  .btn-secondary:active {
+    top: 2px;
+  }
 
   @media (max-width: 1024px) {
     .hero-container {

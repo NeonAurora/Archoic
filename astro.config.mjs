@@ -1,9 +1,13 @@
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
   // Site configuration
   site: 'https://archoic.com', // Replace with your actual domain
+  
+  // React integration
+  integrations: [react()],
   
   // Build optimizations
   build: {
