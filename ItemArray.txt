@@ -1,0 +1,4 @@
+MainCardRotationX: -43,
+MainCardRotationY: 14,
+MainCardRotationZ: 33,	
+
